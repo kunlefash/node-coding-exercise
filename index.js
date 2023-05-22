@@ -26,7 +26,7 @@ fs.readFile("mock_application.json", "utf8", (err, data) => {
 
     // Write the sanitized application to clean_application.json
     const cleanData = JSON.stringify(mockApp, null, 2);
-    fs.writeFile("/src/clean_application.json", cleanData, "utf8", (err) => {
+    fs.writeFile("clean_application.json", cleanData, "utf8", (err) => {
       if (err) {
         console.error("Error writing clean_application.json:", err);
         return;
